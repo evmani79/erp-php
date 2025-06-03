@@ -5,3 +5,4 @@ vendor/
 *.sql
 node_modules/
 storage/logs
+.DS_Store
