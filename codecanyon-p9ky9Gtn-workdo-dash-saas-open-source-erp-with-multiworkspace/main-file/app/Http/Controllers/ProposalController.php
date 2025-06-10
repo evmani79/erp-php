@@ -1365,7 +1365,7 @@ class ProposalController extends Controller
             Setting::updateOrInsert($data, ['value' => $value]);
         }
         // Settings Cache forget
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         return redirect()->back()->with('success', __('Proposal Print setting save sucessfully.'));
     }
     public function previewInvoice($template, $color)

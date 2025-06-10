@@ -242,7 +242,7 @@ class HrmController extends Controller
                 Setting::updateOrInsert($data, ['value' => $value]);
             }
             // Settings Cache forget
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             return redirect()->back()->with('success', 'The HRM setting are saved successfully.');
         }
     }

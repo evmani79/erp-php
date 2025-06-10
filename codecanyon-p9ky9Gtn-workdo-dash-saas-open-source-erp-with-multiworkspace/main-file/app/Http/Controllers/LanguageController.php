@@ -388,7 +388,7 @@ class LanguageController extends Controller
         }
         // Settings Cache forget
         AdminSettingCacheForget();
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         sideMenuCacheForget();
         $user       = \Auth::user();
         $user->lang = $lang;

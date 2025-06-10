@@ -111,7 +111,7 @@ class StripeController extends Controller
             }
             // Settings Cache forget
             AdminSettingCacheForget();
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             return redirect()->back()->with('success', 'Stripe setting save sucessfully.');
         } else {
             return redirect()->back()->with('error', __('Permission denied.'));

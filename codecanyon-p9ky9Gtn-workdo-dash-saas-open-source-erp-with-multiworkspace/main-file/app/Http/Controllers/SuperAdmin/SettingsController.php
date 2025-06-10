@@ -132,7 +132,7 @@ class SettingsController extends Controller
 
             // Settings Cache forget
             AdminSettingCacheForget();
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             sideMenuCacheForget();
             return redirect()->back()->with('success', __('Setting save sucessfully.'));
         } else {
@@ -159,7 +159,7 @@ class SettingsController extends Controller
             }
             // Settings Cache forget
             AdminSettingCacheForget();
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             return redirect()->back()->with('success', 'Setting save sucessfully.');
         } else {
             return redirect()->back()->with('error', __('Permission denied.'));
@@ -214,7 +214,7 @@ class SettingsController extends Controller
         }
         // Settings Cache forget
         AdminSettingCacheForget();
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         return redirect()->back()->with('success', 'Cookie setting save successfully.');
     }
 
@@ -289,7 +289,7 @@ class SettingsController extends Controller
             }
             // Settings Cache forget
             AdminSettingCacheForget();
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             return redirect()->back()->with('success', __('Pusher successfully updated.'));
         } else {
             return redirect()->back()->with('error', __('Permission denied.'));
@@ -354,7 +354,7 @@ class SettingsController extends Controller
         }
         // Settings Cache forget
         AdminSettingCacheForget();
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         return redirect()->back()->with('success', __('SEO setting successfully updated.'));
     }
     public function storageStore(Request $request)
@@ -423,7 +423,7 @@ class SettingsController extends Controller
             }
             // Settings Cache forget
             AdminSettingCacheForget();
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             return redirect()->back()->with('success', 'Storage Setting save sucessfully.');
         } else {
             return redirect()->back()->with('error', __('Permission denied.'));
@@ -462,7 +462,7 @@ class SettingsController extends Controller
             }
             // Settings Cache forget
             AdminSettingCacheForget();
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             return redirect()->back()->with('success', __('Key Settings Save Successfully'));
         } else {
             return redirect()->back()->with('error', __('Permission denied.'));
@@ -498,7 +498,7 @@ class SettingsController extends Controller
         }
         // Settings Cache forget
         AdminSettingCacheForget();
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         return redirect()->back()->with('success', __('Currency Setting save successfully.'));
     }
     public function updateNoteValue(Request $request)

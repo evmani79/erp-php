@@ -227,7 +227,7 @@ class DesignationController extends Controller
                     Setting::updateOrInsert($data, ['value' => $value]);
                 }
                 // Settings Cache forget
-                comapnySettingCacheForget();
+                companySettingCacheForget();
                 return redirect()->route('designation.index')->with('success', __('The designation name are updated successfully.'));
             }
         } else {

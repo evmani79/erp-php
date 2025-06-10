@@ -1366,7 +1366,7 @@ class BillController extends Controller
             Setting::updateOrInsert($data, ['value' => $value]);
         }
         // Settings Cache forget
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         return redirect()->back()->with('success', 'Bill Print setting save sucessfully.');
     }
 

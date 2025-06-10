@@ -210,7 +210,7 @@ class BranchController extends Controller
                     Setting::updateOrInsert($data, ['value' => $value]);
                 }
                 // Settings Cache forget
-                comapnySettingCacheForget();
+                companySettingCacheForget();
                 return redirect()->route('branch.index')->with('success', __('The branch name are updated successfully.'));
             }
         } else {

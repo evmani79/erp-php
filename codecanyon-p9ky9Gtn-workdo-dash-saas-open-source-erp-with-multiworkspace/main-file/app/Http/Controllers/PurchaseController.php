@@ -1227,7 +1227,7 @@ class PurchaseController extends Controller
             Setting::updateOrInsert($data, ['value' => $value]);
         }
         // Settings Cache forget
-        comapnySettingCacheForget();
+        companySettingCacheForget();
 
         return redirect()->back()->with('success', 'The purchase Setting details are updated successfully');
     }

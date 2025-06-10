@@ -536,7 +536,7 @@ class User extends Authenticatable implements LaratrustUser,MustVerifyEmail,JWTS
             if(Auth::check())
             {
                 // Settings Cache forget
-                comapnySettingCacheForget();
+                companySettingCacheForget();
                 sideMenuCacheForget('company',$user->id);
             }
             return ['is_success' => true];

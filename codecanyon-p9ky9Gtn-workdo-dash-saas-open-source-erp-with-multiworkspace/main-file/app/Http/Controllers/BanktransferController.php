@@ -66,7 +66,7 @@ class BanktransferController extends Controller
         }
         // Settings Cache forget
         AdminSettingCacheForget();
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         return redirect()->back()->with('success', __('The bank Transfer Setting save successfully'));
     }
 

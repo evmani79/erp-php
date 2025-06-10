@@ -298,7 +298,7 @@ class ModuleController extends Controller
             userActiveModule::where('user_id', $user->id)->where('module', $name)->delete();
 
             // Settings Cache forget
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             sideMenuCacheForget();
             return redirect()->back()->with('success', __('Successfully cancel subscription.'));
         } else {

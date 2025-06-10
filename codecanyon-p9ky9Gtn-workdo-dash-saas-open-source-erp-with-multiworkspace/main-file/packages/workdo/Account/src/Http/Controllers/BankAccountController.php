@@ -343,7 +343,7 @@ class BankAccountController extends Controller
         }
 
         // Settings Cache forget
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         return redirect()->back()->with('success', __('Bank Accounts Setting saved successfully'));
     }
 

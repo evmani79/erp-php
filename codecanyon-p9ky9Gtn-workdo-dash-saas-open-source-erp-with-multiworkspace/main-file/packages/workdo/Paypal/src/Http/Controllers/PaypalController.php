@@ -122,7 +122,7 @@ class PaypalController extends Controller
 
             // Settings Cache forget
             AdminSettingCacheForget();
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             return redirect()->back()->with('success', __('Paypal Setting save successfully'));
         } else {
             return redirect()->back()->with('error', __('Permission denied.'));
