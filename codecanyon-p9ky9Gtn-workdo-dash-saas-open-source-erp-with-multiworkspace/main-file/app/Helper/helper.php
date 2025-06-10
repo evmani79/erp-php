@@ -1763,12 +1763,29 @@ if (!function_exists('AnnualLeaveCycle')) {
 
 // time tracker
 if (!function_exists('second_to_time')) {
-    function second_to_time($seconds = 0)
-    {
+function second_to_time($seconds = 0)
+{
         $H = floor($seconds / 3600);
         $i = ($seconds / 60) % 60;
         $s = $seconds % 60;
         $time = sprintf("%02d:%02d:%02d", $H, $i, $s);
         return $time;
+    }
+}
+
+if (!function_exists('financial_year_string')) {
+    function financial_year_string($date = null)
+    {
+        $timestamp = $date ? strtotime($date) : time();
+        $year = (int) date('Y', $timestamp);
+        $month = (int) date('m', $timestamp);
+        if ($month < 4) {
+            $start = $year - 1;
+            $end = $year;
+        } else {
+            $start = $year;
+            $end = $year + 1;
+        }
+        return $start . '-' . $end;
     }
 }

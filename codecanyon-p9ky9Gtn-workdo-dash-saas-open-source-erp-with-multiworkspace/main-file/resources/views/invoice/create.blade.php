@@ -107,8 +107,16 @@
                                     <div class="form-group">
                                         {{ Form::label('due_date', __('Due Date'), ['class' => 'form-label']) }}<x-required></x-required>
                                         <div class="form-icon-user">
-                                            {{ Form::date('due_date', date('Y-m-d'), ['class' => 'form-control ', 'required' => 'required', 'placeholder' => 'Select Due Date']) }}
+                                        {{ Form::date('due_date', date('Y-m-d'), ['class' => 'form-control ', 'required' => 'required', 'placeholder' => 'Select Due Date']) }}
 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        {{ Form::label('financial_year', __('Financial Year'), ['class' => 'form-label']) }}
+                                        <div class="form-icon-user">
+                                            {{ Form::text('financial_year', financial_year_string(), ['class' => 'form-control', 'placeholder' => 'YYYY-YYYY']) }}
                                         </div>
                                     </div>
                                 </div>
