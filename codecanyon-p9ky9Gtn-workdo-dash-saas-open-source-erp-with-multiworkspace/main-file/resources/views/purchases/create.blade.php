@@ -554,6 +554,12 @@
 
                                     </div>
                                 </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        {{ Form::label('financial_year', __('Financial Year'), ['class' => 'form-label']) }}
+                                        {{ Form::text('financial_year', financial_year_string(), ['class' => 'form-control', 'placeholder' => 'YYYY-YYYY']) }}
+                                    </div>
+                                </div>
 
                                 @if (module_is_active('CustomField') && !$customFields->isEmpty())
                                     <div class="col-md-12 form-group">

@@ -667,6 +667,12 @@
                                         <input type="text" class="form-control" value="{{ $purchase_number }}" readonly>
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        {{ Form::label('financial_year', __('Financial Year'), ['class' => 'form-label']) }}
+                                        {{ Form::text('financial_year', $purchase->financial_year, ['class' => 'form-control', 'placeholder' => 'YYYY-YYYY']) }}
+                                    </div>
+                                </div>
                             </div>
                             @if (module_is_active('CustomField') && !$customFields->isEmpty())
                                 <div class="col-md-12 form-group">

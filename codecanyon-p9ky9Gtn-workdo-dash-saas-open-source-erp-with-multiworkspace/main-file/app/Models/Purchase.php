@@ -15,6 +15,7 @@ class Purchase extends Model
         'vender_id',
         'warehouse_id',
         'purchase_date',
+        'financial_year',
         'purchase_number',
         'discount_apply',
         'category_id',
@@ -383,5 +384,17 @@ class Purchase extends Model
             }
             $product->save();
         }
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saving(function ($model) {
+            if (empty($model->financial_year)) {
+                $date = $model->purchase_date ?? date('Y-m-d');
+                $model->financial_year = financial_year_string($date);
+            }
+        });
     }
 }

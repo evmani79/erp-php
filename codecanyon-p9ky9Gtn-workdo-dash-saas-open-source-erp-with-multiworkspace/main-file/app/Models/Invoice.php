@@ -19,6 +19,7 @@ class Invoice extends Model
         'customer_id',
         'issue_date',
         'due_date',
+        'financial_year',
         'send_date',
         'category_id',
         'ref_number',
@@ -438,5 +439,17 @@ class Invoice extends Model
             }
             $product->save();
         }
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saving(function ($model) {
+            if (empty($model->financial_year)) {
+                $date = $model->issue_date ?? date('Y-m-d');
+                $model->financial_year = financial_year_string($date);
+            }
+        });
     }
 }
