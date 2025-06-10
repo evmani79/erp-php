@@ -326,7 +326,7 @@ class Invoice extends Model
             ];
             Setting::updateOrInsert($data, ['value' => $id]);
             // Settings Cache forget
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             return true;
         }
         return false;

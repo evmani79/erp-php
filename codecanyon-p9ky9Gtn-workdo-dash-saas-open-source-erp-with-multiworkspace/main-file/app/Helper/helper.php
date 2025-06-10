@@ -300,8 +300,8 @@ if (!function_exists('AdminSettingCacheForget')) {
     }
 }
 
-if (!function_exists('comapnySettingCacheForget')) {
-    function comapnySettingCacheForget($user_id = null, $workspace = null)
+if (!function_exists('companySettingCacheForget')) {
+    function companySettingCacheForget($user_id = null, $workspace = null)
     {
         try {
             if (empty($user_id)) {
@@ -313,7 +313,7 @@ if (!function_exists('comapnySettingCacheForget')) {
             $key = 'company_settings_' . $workspace . '_' . $user_id;
             Cache::forget($key);
         } catch (\Exception $e) {
-            \Log::error('comapnySettingCacheForget :' . $e->getMessage());
+            \Log::error('companySettingCacheForget :' . $e->getMessage());
         }
     }
 }
@@ -338,14 +338,14 @@ if (!function_exists('sideMenuCacheForget')) {
                     $key = 'sidebar_menu_' . $id;
                     Cache::forget($key);
                 } catch (\Exception $e) {
-                    \Log::error('comapnySettingCacheForget :' . $e->getMessage());
+                    \Log::error('companySettingCacheForget :' . $e->getMessage());
                 }
             }
             try {
                 $key = 'sidebar_menu_' . $user->id;
                 Cache::forget($key);
             } catch (\Exception $e) {
-                \Log::error('comapnySettingCacheForget :' . $e->getMessage());
+                \Log::error('companySettingCacheForget :' . $e->getMessage());
             }
             return true;
         }
@@ -354,7 +354,7 @@ if (!function_exists('sideMenuCacheForget')) {
             $key = 'sidebar_menu_' . $user->id;
             Cache::forget($key);
         } catch (\Exception $e) {
-            \Log::error('comapnySettingCacheForget :' . $e->getMessage());
+            \Log::error('companySettingCacheForget :' . $e->getMessage());
         }
 
         return true;

@@ -116,7 +116,7 @@ class SettingsController extends Controller
                 Setting::updateOrInsert($data, ['value' => $value]);
             }
             // Settings Cache forget
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             sideMenuCacheForget();
             return redirect()->back()->with('success', __('Setting save sucessfully.'));
         }
@@ -162,7 +162,7 @@ class SettingsController extends Controller
                 Setting::updateOrInsert($data, ['value' => $value]);
             }
              // Settings Cache forget
-             comapnySettingCacheForget();
+             companySettingCacheForget();
             return redirect()->back()->with('success','Setting save sucessfully.');
         }
         else
@@ -220,7 +220,7 @@ class SettingsController extends Controller
                 Setting::updateOrInsert($data, ['value' => $value]);
             }
             // Settings Cache forget
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             return redirect()->back()->with('success','Company setting save sucessfully.');
         }
 
@@ -254,7 +254,7 @@ class SettingsController extends Controller
             Setting::updateOrInsert($data, ['value' => $value]);
         }
         // Settings Cache forget
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         return redirect()->back()->with('success', __('Currency Setting save successfully.'));
     }
     public function updateNoteValue(Request $request)

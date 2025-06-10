@@ -218,7 +218,7 @@ class DepartmentController extends Controller
                     Setting::updateOrInsert($data, ['value' => $value]);
                 }
                 // Settings Cache forget
-                comapnySettingCacheForget();
+                companySettingCacheForget();
                 return redirect()->route('department.index')->with('success', __('The department name are updated successfully.'));
             }
         } else {

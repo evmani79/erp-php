@@ -950,7 +950,7 @@ class PosController extends Controller
                 Setting::updateOrInsert($data, ['value' => $value]);
             }
             // Settings Cache forget
-            comapnySettingCacheForget();
+            companySettingCacheForget();
 
 
             return redirect()->back()->with('success',__('The POS setting has been saved successfully.'));
@@ -1373,7 +1373,7 @@ class PosController extends Controller
             Setting::updateOrInsert($data, ['value' => $value]);
         }
         // Settings Cache forget
-        comapnySettingCacheForget();
+        companySettingCacheForget();
 
         return redirect()->back()->with('success', __('The POS Setting are updated successfully'));
     }
@@ -1547,7 +1547,7 @@ class PosController extends Controller
             Setting::updateOrInsert($data, ['value' => $value]);
         }
         // Settings Cache forget
-        comapnySettingCacheForget();
+        companySettingCacheForget();
 
         return redirect()->back()->with('success', __('The barcode setting are updated successfully.'));
 

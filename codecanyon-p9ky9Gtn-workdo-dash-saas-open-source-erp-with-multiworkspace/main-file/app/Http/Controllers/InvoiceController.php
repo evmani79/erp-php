@@ -1032,7 +1032,7 @@ class InvoiceController extends Controller
             Setting::updateOrInsert($data, ['value' => $value]);
         }
         // Settings Cache forget
-        comapnySettingCacheForget();
+        companySettingCacheForget();
         return redirect()->back()->with('success', __('Invoice Print setting save sucessfully.'));
     }
 

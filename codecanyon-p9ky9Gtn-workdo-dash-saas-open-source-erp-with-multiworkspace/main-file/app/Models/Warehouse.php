@@ -79,7 +79,7 @@ class Warehouse extends Model
                     if(\Auth::check())
                     {
                     // Settings Cache forget
-                    comapnySettingCacheForget();
+                    companySettingCacheForget();
                     }
                 }
             }
@@ -117,7 +117,7 @@ class Warehouse extends Model
                 if(\Auth::check())
                 {
                 // Settings Cache forget
-                comapnySettingCacheForget();
+                companySettingCacheForget();
                 }
             }
         }else{
@@ -152,7 +152,7 @@ class Warehouse extends Model
             if(\Auth::check())
             {
             // Settings Cache forget
-            comapnySettingCacheForget();
+            companySettingCacheForget();
             }
         }
     }
